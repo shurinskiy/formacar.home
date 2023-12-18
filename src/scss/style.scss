@@ -26,6 +26,12 @@ $breakpoints: (
 	'xxxxlg': 1920px
 );
 
+$container: 1920px;
+
+@include font-face("Montserrat-Regular", "MR", 400);
+@include font-face("Montserrat-Bold", "MB", 700);
+@include font-face("Oswald-Regular", "OR", 400);
+@include font-face("Steppe", "ST", 400);
 
 // @include font-face("Montserrat-ExtraLight", "DM", 100);
 // @include font-face("Montserrat-ExtraBold", "DM", 800);
