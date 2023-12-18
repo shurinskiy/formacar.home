@@ -1,0 +1,71 @@
+.lang {
+	$self: &;
+	position: relative;
+		
+	&:hover #{$self}__box {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: all;
+		transform: translateY(-10px);
+	}
+
+	&__current {
+		@extend %reset-button;
+		font-family: "MR", sans-serif;
+		padding-left: 20px;
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 14px;
+		color: #fff;
+		height: 100%;
+	}
+	
+	&__box {
+		display: flex;
+		flex-flow: column nowrap;
+		transform: translateY(20px);
+		position: absolute;
+		top: 100%;
+		right: -25px;
+		font-family: "MR", sans-serif;
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 14px;
+		color: #fff;
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		pointer-events: none;
+		transition: opacity 0.3s, transform 0.3s;
+
+		&::before {
+			display: block;
+			content: "";
+			border: 16px solid transparent;
+			border-bottom: 16px solid rgba(18, 20, 26, 0.9);
+			margin: 0 20px 0 auto;
+		}
+	}
+
+	&__links {
+		padding: 20px 40px;
+		background: rgba(18, 20, 26, 0.9);
+		border-radius: 12px;
+	}
+
+	&__link {
+		display: block;
+		text-decoration: none;
+		color: inherit;
+		padding: 15px 0;
+		transition: color 0.3s;
+
+		&_current {
+			color: #387DFB !important;
+		}
+
+		&:hover {
+			color: #80ADFF;
+		}
+	}
+}

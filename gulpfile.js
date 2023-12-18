@@ -133,7 +133,12 @@ function icons() {
 	return gulp.src(pth.src.icn)
 	.pipe($.svgSymbolView({
 		name: 'icons-sprite',
-		monochrome: { grey: '#888888' }
+		monochrome: {
+			white: '#ffffff',
+			cyan: '#00ACE3',
+			blue: '#0075FF',
+			purple: '#BA62FF'
+		}
 	}))
 	.pipe(gulp.dest(pth.pbl.img))
 };

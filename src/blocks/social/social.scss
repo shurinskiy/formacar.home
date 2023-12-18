@@ -1,0 +1,68 @@
+.social {
+	$self: &;
+	display: flex;
+	align-items: center;
+
+	&_eco {
+		#{$self}__link {
+			&_ins { background-image: url('#{$images-path}icons-sprite.svg#icon-soc-ins-view-cyan'); }
+			&_fbk { background-image: url('#{$images-path}icons-sprite.svg#icon-soc-fbk-view-cyan'); }
+			&_tgm { background-image: url('#{$images-path}icons-sprite.svg#icon-soc-tgm-view-cyan'); }
+			&_twt { background-image: url('#{$images-path}icons-sprite.svg#icon-soc-twt-view-cyan'); }
+			&_mdm { background-image: url('#{$images-path}icons-sprite.svg#icon-soc-mdm-view-cyan'); }
+			&_dsc { background-image: url('#{$images-path}icons-sprite.svg#icon-soc-dsc-view-cyan'); }
+		}
+	}
+
+	&_crypto {
+		#{$self}__link {
+			&_ins { background-image: url('#{$images-path}icons-sprite.svg#icon-soc-ins-view-purple'); }
+			&_fbk { background-image: url('#{$images-path}icons-sprite.svg#icon-soc-fbk-view-purple'); }
+			&_tgm { background-image: url('#{$images-path}icons-sprite.svg#icon-soc-tgm-view-purple'); }
+			&_twt { background-image: url('#{$images-path}icons-sprite.svg#icon-soc-twt-view-purple'); }
+			&_mdm { background-image: url('#{$images-path}icons-sprite.svg#icon-soc-mdm-view-purple'); }
+			&_dsc { background-image: url('#{$images-path}icons-sprite.svg#icon-soc-dsc-view-purple'); }
+		}
+	}
+
+	&_design {
+		#{$self}__link {
+			&_ins { background-image: url('#{$images-path}icons-sprite.svg#icon-soc-ins-view-blue'); }
+			&_fbk { background-image: url('#{$images-path}icons-sprite.svg#icon-soc-fbk-view-blue'); }
+			&_tgm { background-image: url('#{$images-path}icons-sprite.svg#icon-soc-tgm-view-blue'); }
+			&_twt { background-image: url('#{$images-path}icons-sprite.svg#icon-soc-twt-view-blue'); }
+			&_mdm { background-image: url('#{$images-path}icons-sprite.svg#icon-soc-mdm-view-blue'); }
+			&_dsc { background-image: url('#{$images-path}icons-sprite.svg#icon-soc-dsc-view-blue'); }
+		}
+	}
+
+	&__text {
+		margin-right: 10px;
+		font-family: "OR", sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		font-weight: 400;
+		font-size: 18px;
+		color: #fff;
+	}
+
+	&__links {
+		display: flex;
+		align-items: center;
+	}
+
+	&__link {
+		display: block;
+		height: 30px;
+		width: 30px;
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		margin: 0 10px;
+		transition: filter 0.3s;
+		filter: saturate(0) brightness(2);
+		
+		&:hover { filter: none; }
+	}
+}

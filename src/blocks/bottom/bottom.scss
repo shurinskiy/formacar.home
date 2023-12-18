@@ -1,0 +1,95 @@
+.bottom {
+	$self: &;
+	display: grid;
+	grid-template-columns: 2fr minmax(220px, 1fr) 2fr;
+	align-items: center;
+
+	@include media('<=lg') {
+		display: block;
+	}
+
+	&__socials {
+
+		@include media('<=lg') {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__url {
+		display: block;
+		font-family: "OR", sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		transition: color 0.3s;
+		text-decoration: none;
+		text-align: center;
+		font-weight: 400;
+		font-size: 18px;
+		color: #fff;
+
+		&_eco:hover {
+			color: #00ACE3;
+		}
+		
+		&_crypto:hover {
+			color: #BA62FF;
+		}
+		
+		&_design:hover {
+			color: #0075FF;
+		}
+
+		@include media('<=lg') {
+			text-align: left;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__apps {
+		display: flex;
+		gap: 10px 20px;
+		margin-left: auto;
+
+		&_eco #{$self}__app:hover {
+			background-color: rgba(0, 170, 227, 0.5);
+		}
+		
+		&_crypto #{$self}__app:hover {
+			background-color: rgba(187, 98, 255, 0.5);
+		}
+		
+		&_design #{$self}__app:hover {
+			background-color: rgba(0, 119, 255, 0.5);
+		}
+	}
+
+	&__app {
+		display: block;
+		background-color: rgba(255, 255, 255, 0.1);
+		font-family: "MR", sans-serif;
+		padding: 7px 25px 7px 65px;
+		text-decoration: none;
+		border-radius: 5px;
+		line-height: 1.32;
+		font-weight: 500;
+		color: #fff;
+		transition: background-color 0.3s;
+		background-repeat: no-repeat;
+		background-position: center left 25px;
+
+		&_store { background-image: url('#{$images-path}appstore.svg'); }
+		&_play { background-image: url('#{$images-path}playmarket.svg'); }
+
+		span {
+			display: block;
+
+			&:first-child {
+				font-size: 9px;				
+			}
+			
+			&:last-child {
+				font-size: 16px;				
+			}
+		}
+	}
+}

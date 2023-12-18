@@ -57,9 +57,15 @@
 		"workdir": ""
 	},
 	"bemtree": {
-		"from": "src/**/!(_|temp)*.html",
+		"from": "src/**/*.html",
 		"to": "src/blocks",
 		"js": "src/js/blocks.js",
-		"omit": "@@,js-,active,opened"
+		"omit": "@@,js-,active,opened,swiper"
+	},
+	"dependencies": {
+		"enquire.js": "^2.1.6",
+		"scroll-lock": "^2.1.5",
+		"swiped-events": "^1.1.9",
+		"swiper": "^11.0.5"
 	}
 }
