@@ -8,7 +8,7 @@
 }
 
 // Include breakpoints badge
-body { @include screen-media(); }
+// body { @include screen-media(); }
 
 // Import media-query helper
 @import "../../node_modules/include-media/dist/_include-media.scss";
@@ -45,7 +45,10 @@ $container: 1880px;
 // @include font-face("Montserrat-Bold", "DM", 700);
 // @include font-face("Montserrat-Thin", "DM", 200);
 
-// @import "../../node_modules/swiper/swiper";
+@import "../../node_modules/swiper/swiper";
+@import "../../node_modules/swiper/modules/effect-fade";
+@import "../../node_modules/lightgallery/scss/lightgallery";
+@import "../../node_modules/lightgallery/scss/lg-video";
 
 // Import BEM blocks scss
 @import "../blocks/**/*.scss";
@@ -61,14 +64,15 @@ body, html {
 	color: #fff;
 	display: flex;
 	flex-flow: column nowrap;
+	scroll-behavior: smooth;	
 	
-	&::-webkit-scrollbar { display: none; }
+	// &::-webkit-scrollbar { display: none; }
 }
 // .main { flex: 1 0 auto; }
-.footer { 
+/* .footer { 
 	flex: 0 0 auto; 
 	margin-top: auto; 
-}
+} */
 
 
 p { margin-bottom: 10px; }

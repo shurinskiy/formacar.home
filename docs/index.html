@@ -43,15 +43,15 @@
 						</a>
 						<p class="hero__text">A global IT project with a car-themed focus featuring a proprietary architecture incorporating various online services.</p>
 						<div class="hero__buttons">
-							<a class="hero__down" href="./">Our project</a>
-							<a class="hero__button" href="./">for business partners</a>
+							<a class="hero__down" href="#first">Our project</a>
+							<a class="hero__button" href="#last">for business partners</a>
 						</div>
 					</div>
 					<div class="screen__side hero__cards">
 						<div class="hero__card card card_eco">
 							<div class="card__inner">
 								<div class="card__top">
-									<img class="card__logo" src="./images/card-logo-automotive.svg" alt="">
+									<div class="card__logo"><img src="./images/card-logo-automotive.svg" alt=""></div>
 									<a class="card__link" href="./">Go to project</a>
 								</div>
 								<div class="card__text">
@@ -64,7 +64,7 @@
 						<div class="hero__card card card_crypto">
 							<div class="card__inner">
 								<div class="card__top">
-									<img class="card__logo" src="./images/card-logo-crypto.svg" alt="">
+									<div class="card__logo"><img src="./images/card-logo-crypto.svg" alt=""></div>
 									<a class="card__link" href="./">Go to project</a>
 								</div>
 								<div class="card__text">
@@ -77,7 +77,7 @@
 						<div class="hero__card card card_design">
 							<div class="card__inner">
 								<div class="card__top">
-									<img class="card__logo" src="./images/card-logo-design.svg" alt="">
+									<div class="card__logo"><img src="./images/card-logo-design.svg" alt=""></div>
 									<a class="card__link" href="./">Go to project</a>
 								</div>
 								<div class="card__text">
@@ -90,11 +90,11 @@
 				</div>
 			</div>
 		</section>
-		<section class="main__section swiper-slide screen screen_eco">
+		<section class="main__section swiper-slide screen screen_eco" id="first">
 			<div class="screen__inner container">
 				<div class="screen__body">
 					<div class="screen__content">
-						<h2 class="screen__title screen__title_smaller">Formacar</h2>
+						<h2 class="screen__title">Formacar</h2>
 						<p class="screen__text">Formacar is the first automotive ecosystem. By bringing together a number of services and products, Formacar gives you a new and wonderful experience of interacting with the automotive world. The Formacar app is the basis of our ecosystem that we have been developing since 2017. Here you will find:</p>
 						<ul class="screen__list">
 							<li>A 3D Car Configurator with no peers worldwide. A vast selection of car models and all kinds of tuning components lets you create your ultimate dream car.</li>
@@ -104,10 +104,31 @@
 							<li>AR Mode. You can try on various new wheels in this mode and even project your virtual 3D car into the real world to get an idea what it will look like once finished.</li>
 						</ul>
 						<p class="screen__text">Download our app and join the Formacar ecosystem!</p>
-						<!-- <a class="screen__button" href="./">Get details</a> -->
 					</div>
 					<div class="screen__side">
-	
+						<div class="screen__gallery gallery">
+							<div class="gallery__slider swiper">
+								<div class="swiper-wrapper">
+									<div class="gallery__item swiper-slide" 
+										data-title="Formacar Promo"
+										data-poster="./images/poster-1.png"
+										data-video='{"source": [{"src":"./images/video-1.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true}}'
+									>
+										<img src="./images/poster-1.png" alt="Formacar Promo">
+									</div>
+									<div class="gallery__item swiper-slide"
+										data-title="Configurator Formacar"
+										data-poster="./images/poster-2.png"
+										data-video='{"source": [{"src":"./images/video-2.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true}}'
+									>
+										<img src="./images/poster-2.png" alt="Configurator Formacar">
+									</div>
+									<!-- <div class="gallery__item swiper-slide" data-src="./images/poster-3.png">
+										<img src="./images/poster-3.png" alt="">
+									</div> -->
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="screen__bottom bottom">
@@ -117,7 +138,6 @@
 							<a class="social__link social__link_ins" href="./"></a>
 							<a class="social__link social__link_fbk" href="./"></a>
 							<a class="social__link social__link_tgm" href="./"></a>
-							<!-- <a class="social__link social__link_dsc" href="./"></a> -->
 							<a class="social__link social__link_twt" href="./"></a>
 							<a class="social__link social__link_mdm" href="./"></a>
 						</div>
@@ -140,13 +160,25 @@
 			<div class="screen__inner container">
 				<div class="screen__body">
 					<div class="screen__content">
-						<h2 class="screen__title screen__title_smaller">Formacar<br> crypto</h2>
+						<h2 class="screen__title">Formacar<br> crypto</h2>
 						<p class="screen__text">The Web3 division of the company, dedicated to developing Formacar Action, a thrilling mobile racing game that incorporates innovative GameFi mechanics. This game stands out by leveraging the power of blockchain technology to enhance the overall gaming experience.</p>
 						<p class="screen__text">Players are challenged to become professional racers and compete with other users from around the world. Due to its variety, the game content will not let the user get bored. There is a diverse range of sports cars, each with its own characteristics and unlocks at a certain level. Variations of beautiful racing tracks and game modes such as Circuit, Sprint, Drift or Freeride, as well as a multitude of car customization and tuning options. And last but not least - a unique FCG rewards feature available only in the current release of the game!</p>
 						<p class="screen__text">Immerse the future of the Auto Global Economic system with Formacar!</p>
 					</div>
 					<div class="screen__side">
-	
+						<div class="screen__gallery gallery">
+							<div class="gallery__slider swiper">
+								<div class="swiper-wrapper">
+									<div class="gallery__item swiper-slide"
+										data-title="Gamify project"
+										data-poster="./images/poster-3.png"
+										data-video='{"source": [{"src":"./images/video-3.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true}}'
+									>
+										<img src="./images/poster-3.png" alt="Gamify project">
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="screen__bottom bottom">
@@ -179,7 +211,7 @@
 			<div class="screen__inner container">
 				<div class="screen__body">
 					<div class="screen__content">
-						<h2 class="screen__title screen__title_smaller">Formacar<br> design</h2>
+						<h2 class="screen__title">Formacar<br> design</h2>
 						<p class="screen__text">Formacar Design is a studio dedicated to premium vehicle design and styling.</p>
 						<p class="screen__text">The high standards and the individual approach adopted by Formacar offer a fresh perspective on the mundane and let you discover new aspects of automotive design finesse.</p>
 					</div>
@@ -195,21 +227,24 @@
 						</div>
 					</div>
 					<a class="bottom__url bottom__url_design" href="./">www.design.formacar.com</a>
-					<div class="bottom__apps bottom__apps_design">
-						<!-- <a class="bottom__app bottom__app_store" href="./">
-							<span>Download on</span>
-							<span>App Store</span>
-						</a>
-						<a class="bottom__app bottom__app_play" href="./">
-							<span>Download on</span>
-							<span>Google Play</span>
-						</a> -->
-					</div>
 				</div>
 			</div>
 		</section>
-		<section class="main__section swiper-slide screen screen_bottom">
-
+		<section class="main__section swiper-slide screen screen_bottom" id="last">
+			<div class="screen__inner container">
+				<div class="screen__body">
+					<div class="screen__content">
+						<h2 class="screen__title screen__title_smaller">Become a Partner<br> with Formacar Group!</h2>
+						<p class="screen__text">We're expanding our presence in GCC region and actively seeking partners and like-minded individuals to propel our business forward.</p>
+						<p class="screen__text">If you've dreamt of launching and growing a successful venture in the automotive industry, join our team!</p>
+						<p class="screen__text">Formacar. It changes everything.</p>
+						<a class="screen__button" href="./">Get details</a>
+					</div>
+					<div class="screen__side">
+	
+					</div>
+				</div>
+			</div>
 		</section>
 	</div>
 </main> 

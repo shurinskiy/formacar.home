@@ -51,7 +51,13 @@
 	}
 
 	&__logo {
+		box-sizing: border-box;
+		padding-right: 20px;
 		margin-right: auto;
+
+		img {
+			display: block;
+		}
 	}
 
 	&__link {
@@ -63,12 +69,22 @@
 		background-color: #0075FF;
 		text-transform: uppercase;
 		text-decoration: none;
+		white-space: nowrap;
 		font-weight: 700;
 		font-size: 16px;
 		color: #fff;
 
+		@include media('<=xs') {
+			display: none;
+		}
+
 		&_mobile {
 			display: none;
+			margin-top: 20px;
+
+			@include media('<=xs') {
+				display: block;
+			}
 		}
 	}
 
@@ -77,6 +93,12 @@
 		
 		p:not(:last-child) {
 			margin-bottom: 20px;
+		}
+
+		br {
+			@include media('<=xs') {
+				display: none;
+			}
 		}
 	}
 }

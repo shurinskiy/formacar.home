@@ -1,5 +1,6 @@
 .screen {
 	$self: &;
+	box-sizing: border-box;
 	border-left: 5px solid #fff;
 	
 	&_hero {
@@ -29,13 +30,9 @@
 	&__inner {
 		display: flex;
 		flex-flow: column nowrap;
-		min-height: 100vh;
 		padding-top: 50px;
 		padding-bottom: 50px;
-
-		@include media('<=lg') {
-			min-height: auto;
-		}
+		height: 100%;
 	}
 	
 	&__body {
@@ -95,9 +92,9 @@
 		line-height: 1.0;
 		font-size: 64px;
 		color: #fff;
-
+		
 		&_smaller {
-			
+			font-size: 48px;
 		}
 	}
 

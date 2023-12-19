@@ -1,2 +1,1 @@
-
-import "../blocks/main/main.js";
+import "../blocks/gallery/gallery.js";

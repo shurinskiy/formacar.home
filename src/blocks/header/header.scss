@@ -7,33 +7,51 @@
 	left: 0;
 	top: 0;
 	
-	&__inner {
-		padding-top: 50px;
-		padding-bottom: 50px;
-		display: flex;
+	@include media('<=lg') {
+		background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
 	}
 
+	&__inner {
+		display: flex;
+		align-items: center;
+		height: 140px;
+		
+		@include media('<=xs') {
+			height: 70px;
+		}
+	}
+	
 	&__logos {
 		position: relative;
 		flex-grow: 1;
-		height: 40px;
+		height: 100%;
 	}
 
 	&__logo {
 		opacity: 0;
 		visibility: hidden;
-		position: absolute;
 		pointer-events: none;
-		transition: opacity 0.3s;
+		transition: opacity 0.3s, visibility 0.3s;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
 
 		&_showed {
 			opacity: 1;
 			visibility: visible;
 			pointer-events: all;
 		}
+
+		img {
+			display: block;
+		
+			@include media('<=xs') {
+				max-width: 170px;
+			}
+		}
 	}
 
 	&__lang {
-
+		height: 40px;
 	}
 }

@@ -84,11 +84,6 @@
 			margin: 0 auto;
 		}
 
-		/* @include media('<=md') {
-			order: -1;
-			margin-bottom: 75px;
-		} */
-
 		&:hover {
 			filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.75));
 		}
