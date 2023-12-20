@@ -80,11 +80,6 @@ strong { font-weight: bold; }
 em { font-style: italic; }
 
 
-@keyframes showItem {
-	from { opacity: 0; }
-	to { opacity: 1; }
-}
-
 @keyframes moveDown {
 	0% { transform: translateY(-5px); }
 	50% { transform: translateY(5px); }
