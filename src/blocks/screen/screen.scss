@@ -2,10 +2,23 @@
 	$self: &;
 	box-sizing: border-box;
 	border-left: 5px solid #fff;
+	overflow-x: hidden;
+
+	@include media('<=xxs') {
+		border-width: 3px;
+	}
 	
 	&_hero {
 		background: url('#{$images-path}hero-bg.png') center top / 100% auto no-repeat transparent;
 		border-color: #80ADFF;
+
+		@include media('<=xxs') {
+			background-image: url('#{$images-path}hero-bg-mobile.png');
+		}
+	
+		#{$self}__content {
+			margin-bottom: 70px;
+		}
 	}
 	
 	&_eco {
@@ -37,8 +50,9 @@
 	
 	&__body {
 		display: flex;
+		align-items: center;
 		justify-content: space-between;
-		margin: auto 0;
+		flex-grow: 1;
 
 		@include media('<=lg') {
 			display: block;
@@ -53,13 +67,19 @@
 		flex-flow: column nowrap;
 		justify-content: center;
 		padding-left: 20px;
-		// @include outline(white);
+
+		@include media('<=xxlg') {
+			padding: 0;
+		}
 
 		@include media('<=lg') {
-			padding: 0;
 			width: auto;
 			max-width: none;
 			margin-bottom: 40px;
+		}
+
+		@include media('<=xxs') {
+			margin-bottom: 20px;
 		}
 	}
 
@@ -70,18 +90,114 @@
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: center;
-		// @include outline(white);
+		position: relative;
 		
 		@include media('<=lg') {
 			width: auto;
 			max-width: none;
 			margin-bottom: 40px;
 		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 30px;
+		}
+		
+		&_design {
+			align-self: stretch;
+
+			#{$self}__image {
+				top: calc(50% + 30px);
+				left: -100px;
+				height: 600px;
+				transform: translate(50%, -50%);
+				
+				@include media('<=xxlg') {
+					top: calc(50% + 15px);
+					height: 460px;
+					left: -50px;
+				}
+				
+				@include media('<=xlg') {
+					height: 360px;
+					top: calc(50% + 10px);
+					left: 20px;
+				}
+				
+				@include media('<=lg') {
+					transform: translate(50%, 0);
+					height: auto;
+				}
+				
+				&[data-animation].showed {
+					transform: translate(0, -50%);
+		
+					@include media('<=lg') {
+						transform: translate(0, 0);
+					}
+				}
+			}
+		}
+		
+		&_bottom {
+			justify-content: flex-end;
+			align-self: stretch;
+		
+			@include media('<=lg') {
+				margin-bottom: -50px;
+			}
+
+			#{$self}__image {
+				left: -100px;
+				bottom: -50px;
+				height: 800px;
+				transform: translate(50%, 0);
+				
+				@include media('<=xxlg') {
+					left: 30px;
+					height: 610px;
+				}
+		
+				@include media('<=lg') {
+					height: auto;
+					width: 670px;
+					margin: 0 auto;
+				}
+		
+				@include media('<=xxs') {
+					margin: 0;
+					max-width: calc(100% + 50px);
+				}
+				
+				&[data-animation].showed {
+					transform: translate(0);
+				}
+			}
+		}
+	}
+
+	&__image {
+		position: absolute;
+		max-height: 100%;
+		max-width: none;
+		
+		@include media('<=lg') {
+			max-height: none;
+			position: static;
+			max-width: 100%;
+		}
+		
+		&[data-animation] {
+			opacity: 0;
+			will-change: opacity;
+			will-change: transform;
+			transition: transform 1.0s, opacity 1.0s;
+
+			&.showed { opacity: 1; }
+		}
 	}
 
 	&__bottom {
 		min-height: 47px;
-		// @include outline(white);
 	}
 
 	&__title {
@@ -93,18 +209,87 @@
 		font-size: 64px;
 		color: #fff;
 		
+		@include media('<=xxlg') {
+			font-size: 48px;
+		}
+		
+		@include media('<=xlg') {
+			font-size: 40px;
+		}
+
+		@include media('<=xxs') {
+			margin-bottom: 20px;
+			font-size: 32px;
+		}
+		
+		&[data-animation] {
+			opacity: 0;
+	
+			&.showed {
+				animation: titleFadeUp 0.7s;
+				animation-fill-mode: forwards;
+			}
+		}
+		
 		&_smaller {
 			font-size: 48px;
+
+			@include media('<=xxlg') {
+				font-size: 40px;
+			}
+
+			@include media('<=xs') {
+				font-size: 32px;
+			}
+
+			@include media('<=xxs') {
+				font-size: 24px;
+			}
+		}
+
+		br {
+
+			@include media('<=xxlg') {
+				display: none;
+			}
 		}
 	}
 
 	&__text {
-		margin-bottom: 20px;
-	}
+		font-size: 18px;
+		line-height: 1.3;
+		
+		@include media('<=xlg') {
+			font-size: 16px;
+		}
+		
+		@include media('<=lg') {
+			font-size: 14px;
+		}
+		
+		&[data-animation] {
+			opacity: 0;
+	
+			&.showed {
+				animation: titleFadeUp 0.7s;
+				animation-fill-mode: forwards;
+				animation-delay: 0.2s;
+			}
+		}
 
-	&__list {
+		&_smaller {
+			font-size: 16px;
+		
+			@include media('<=xlg') {
+				font-size: 14px;
+			}
+		}
+		
+		p {
+			margin-bottom: 20px;
+		}
 
-		li {
+		ul li {
 			position: relative;
 			margin-bottom: 20px;
 	
@@ -117,7 +302,7 @@
 				top: 0;
 			}
 		}
-	} 
+	}
 
 	&__button {
 		display: block;
@@ -135,5 +320,19 @@
 		max-width: 240px;
 		margin-top: 40px;
 		width: 100%;
+
+		@include media('<=xxs') {
+			margin: 10px 0;
+		}
+
+		&[data-animation] {
+			opacity: 0;
+	
+			&.showed {
+				animation: titleFadeUp 0.7s;
+				animation-fill-mode: forwards;
+				animation-delay: 0.4s;
+			}
+		}
 	}
 }

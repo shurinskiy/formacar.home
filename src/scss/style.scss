@@ -90,3 +90,13 @@ em { font-style: italic; }
 	50% { transform: translateY(5px); }
 	100% { transform: translateY(-5px); }
 }
+
+@keyframes cardSlideIn {
+	from { opacity: 0; transform: translateX(100px); }
+	to { opacity: 1; transform: translateX(0)}
+}
+
+@keyframes titleFadeUp {
+	from { opacity: 0; transform: translateY(30px); }
+	to { opacity: 1; transform: translateY(0)}
+}

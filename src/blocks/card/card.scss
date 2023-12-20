@@ -8,6 +8,15 @@
 	min-height: 200px;
 	position: relative;
 	overflow: hidden;
+	
+	@include media('<=xxlg') {
+		min-height: 170px;
+		padding: 20px;
+	}
+	
+	@include media('<=xxs') {
+		padding: 15px;
+	}
 
 	&::before {
 		content: '';
@@ -48,13 +57,21 @@
 		display: flex;
 		align-items: center;
 		margin-bottom: 30px;
+		
+		@include media('<=xxs') {
+			margin-bottom: 25px;
+		}
 	}
 
 	&__logo {
 		box-sizing: border-box;
 		padding-right: 20px;
 		margin-right: auto;
-
+	
+		@include media('<=xxs') {
+			max-width: 185px;
+		}
+	
 		img {
 			display: block;
 		}
@@ -73,6 +90,11 @@
 		font-weight: 700;
 		font-size: 16px;
 		color: #fff;
+		
+		@include media('<=xxlg') {
+			padding: 7px 25px;
+			font-size: 12px;
+		}
 
 		@include media('<=xs') {
 			display: none;

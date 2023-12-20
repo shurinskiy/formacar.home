@@ -27,16 +27,37 @@
 		font-size: 18px;
 		color: #fff;
 
-		&_eco:hover {
-			color: #00ACE3;
+		&_eco {
+
+			@include media('<=xxs') {
+				color: #00ACE3;
+			}
+
+			&:hover {
+				color: #00ACE3;
+			}
 		}
 		
-		&_crypto:hover {
-			color: #BA62FF;
+		&_crypto {
+
+			@include media('<=xxs') {
+				color: #BA62FF;
+			}
+
+			&:hover {
+				color: #BA62FF;
+			}
 		}
 		
-		&_design:hover {
-			color: #0075FF;
+		&_design {
+
+			@include media('<=xxs') {
+				color: #0075FF;
+			}
+
+			&:hover {
+				color: #0075FF;
+			}
 		}
 
 		@include media('<=lg') {
@@ -47,6 +68,7 @@
 
 	&__apps {
 		display: flex;
+		flex-wrap: wrap;
 		gap: 10px 20px;
 		margin-left: auto;
 
@@ -64,24 +86,49 @@
 	}
 
 	&__app {
+		box-sizing: border-box;
 		display: block;
 		background-color: rgba(255, 255, 255, 0.1);
 		font-family: "MR", sans-serif;
-		padding: 7px 25px 7px 65px;
+		padding: 7px 7px 7px 25px;
 		text-decoration: none;
 		border-radius: 5px;
 		line-height: 1.32;
 		font-weight: 500;
 		color: #fff;
-		transition: background-color 0.3s;
+		width: 190px;
 		background-repeat: no-repeat;
+		transition: background-color 0.3s;
 		background-position: center left 25px;
+		display: flex;
+		
+		@include media('<=xxs') {
+			padding: 7px;
+			width: 100%;
+			justify-content: center;
+		}
 
-		&_store { background-image: url('#{$images-path}appstore.svg'); }
-		&_play { background-image: url('#{$images-path}playmarket.svg'); }
+		&::before {
+			display: block;
+			content: '';
+			width: 30px;
+			height: 30px;
+			background-color: transparent;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			margin-right: 15px;
+		}
+
+		&_store::before { background-image: url('#{$images-path}appstore.svg'); }
+		&_play::before { background-image: url('#{$images-path}playmarket.svg'); }
+	}
+
+	&__app-inner {
 
 		span {
 			display: block;
+			white-space: nowrap;
 
 			&:first-child {
 				font-size: 9px;				

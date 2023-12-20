@@ -38,17 +38,17 @@
 			<div class="screen__inner container">
 				<div class="screen__body">
 					<div class="screen__content hero__content">
-						<a class="hero__logo" href="./">
+						<a class="hero__logo" href="./" data-animation data-repeat>
 							<img src="./images/logo-large.svg" alt="">
 						</a>
-						<p class="hero__text">A global IT project with a car-themed focus featuring a proprietary architecture incorporating various online services.</p>
-						<div class="hero__buttons">
+						<p class="hero__text" data-animation data-repeat>A global IT project with a car-themed focus featuring a proprietary architecture incorporating various online services.</p>
+						<div class="hero__buttons" data-animation data-repeat>
 							<a class="hero__down" href="#first">Our project</a>
 							<a class="hero__button" href="#last">for business partners</a>
 						</div>
 					</div>
 					<div class="screen__side hero__cards">
-						<div class="hero__card card card_eco">
+						<div class="hero__card card card_eco" data-animation="0.5" data-repeat>
 							<div class="card__inner">
 								<div class="card__top">
 									<div class="card__logo"><img src="./images/card-logo-automotive.svg" alt=""></div>
@@ -61,7 +61,7 @@
 								<a class="card__link card__link_mobile" href="./">Go to project</a>
 							</div>
 						</div>
-						<div class="hero__card card card_crypto">
+						<div class="hero__card card card_crypto" data-animation="0.5" data-repeat>
 							<div class="card__inner">
 								<div class="card__top">
 									<div class="card__logo"><img src="./images/card-logo-crypto.svg" alt=""></div>
@@ -74,7 +74,7 @@
 								<a class="card__link card__link_mobile" href="./">Go to project</a>
 							</div>
 						</div>
-						<div class="hero__card card card_design">
+						<div class="hero__card card card_design" data-animation="0.5" data-repeat>
 							<div class="card__inner">
 								<div class="card__top">
 									<div class="card__logo"><img src="./images/card-logo-design.svg" alt=""></div>
@@ -94,19 +94,21 @@
 			<div class="screen__inner container">
 				<div class="screen__body">
 					<div class="screen__content">
-						<h2 class="screen__title">Formacar</h2>
-						<p class="screen__text">Formacar is the first automotive ecosystem. By bringing together a number of services and products, Formacar gives you a new and wonderful experience of interacting with the automotive world. The Formacar app is the basis of our ecosystem that we have been developing since 2017. Here you will find:</p>
-						<ul class="screen__list">
-							<li>A 3D Car Configurator with no peers worldwide. A vast selection of car models and all kinds of tuning components lets you create your ultimate dream car.</li>
-							<li>An Ads section for buying and selling cars and car parts all around the world.</li>
-							<li>A built-in social network: meet new people, interact and share content with your friends.</li>
-							<li>News: always stay tuned in on the hottest news of the automobile world.</li>
-							<li>AR Mode. You can try on various new wheels in this mode and even project your virtual 3D car into the real world to get an idea what it will look like once finished.</li>
-						</ul>
-						<p class="screen__text">Download our app and join the Formacar ecosystem!</p>
+						<h2 class="screen__title" data-animation="0.9" data-repeat>Formacar</h2>
+						<div class="screen__text screen__text_smaller" data-animation="0.9" data-repeat>
+							<p>Formacar is the first automotive ecosystem. By bringing together a number of services and products, Formacar gives you a new and wonderful experience of interacting with the automotive world. The Formacar app is the basis of our ecosystem that we have been developing since 2017. Here you will find:</p>
+							<ul>
+								<li>A 3D Car Configurator with no peers worldwide. A vast selection of car models and all kinds of tuning components lets you create your ultimate dream car.</li>
+								<li>An Ads section for buying and selling cars and car parts all around the world.</li>
+								<li>A built-in social network: meet new people, interact and share content with your friends.</li>
+								<li>News: always stay tuned in on the hottest news of the automobile world.</li>
+								<li>AR Mode. You can try on various new wheels in this mode and even project your virtual 3D car into the real world to get an idea what it will look like once finished.</li>
+							</ul>
+							<p>Download our app and join the Formacar ecosystem!</p>
+						</div>
 					</div>
 					<div class="screen__side">
-						<div class="screen__gallery gallery">
+						<div class="screen__gallery gallery" data-animation="0.9" data-repeat>
 							<div class="gallery__slider swiper">
 								<div class="swiper-wrapper">
 									<div class="gallery__item swiper-slide" 
@@ -134,7 +136,7 @@
 				<div class="screen__bottom bottom">
 					<div class="bottom__socials social social_eco">
 						<span class="social__text">Subscribe to us:</span>
-						<div class="social__links">
+						<div class="social__links" data-animation data-repeat>
 							<a class="social__link social__link_ins" href="./"></a>
 							<a class="social__link social__link_fbk" href="./"></a>
 							<a class="social__link social__link_tgm" href="./"></a>
@@ -145,12 +147,16 @@
 					<a class="bottom__url bottom__url_eco" href="./">www.formacar.com</a>
 					<div class="bottom__apps bottom__apps_eco">
 						<a class="bottom__app bottom__app_store" href="./">
-							<span>Download on</span>
-							<span>App Store</span>
+							<div class="bottom__app-inner">
+								<span>Download on</span>
+								<span>App Store</span>
+							</div>
 						</a>
 						<a class="bottom__app bottom__app_play" href="./">
-							<span>Download on</span>
-							<span>Google Play</span>
+							<div class="bottom__app-inner">
+								<span>Download on</span>
+								<span>Google Play</span>
+							</div>
 						</a>
 					</div>
 				</div>
@@ -160,13 +166,15 @@
 			<div class="screen__inner container">
 				<div class="screen__body">
 					<div class="screen__content">
-						<h2 class="screen__title">Formacar<br> crypto</h2>
-						<p class="screen__text">The Web3 division of the company, dedicated to developing Formacar Action, a thrilling mobile racing game that incorporates innovative GameFi mechanics. This game stands out by leveraging the power of blockchain technology to enhance the overall gaming experience.</p>
-						<p class="screen__text">Players are challenged to become professional racers and compete with other users from around the world. Due to its variety, the game content will not let the user get bored. There is a diverse range of sports cars, each with its own characteristics and unlocks at a certain level. Variations of beautiful racing tracks and game modes such as Circuit, Sprint, Drift or Freeride, as well as a multitude of car customization and tuning options. And last but not least - a unique FCG rewards feature available only in the current release of the game!</p>
-						<p class="screen__text">Immerse the future of the Auto Global Economic system with Formacar!</p>
+						<h2 class="screen__title" data-animation="0.9" data-repeat>Formacar<br> crypto</h2>
+						<div class="screen__text screen__text_smaller" data-animation="0.9">
+							<p>The Web3 division of the company, dedicated to developing Formacar Action, a thrilling mobile racing game that incorporates innovative GameFi mechanics. This game stands out by leveraging the power of blockchain technology to enhance the overall gaming experience.</p>
+							<p>Players are challenged to become professional racers and compete with other users from around the world. Due to its variety, the game content will not let the user get bored. There is a diverse range of sports cars, each with its own characteristics and unlocks at a certain level. Variations of beautiful racing tracks and game modes such as Circuit, Sprint, Drift or Freeride, as well as a multitude of car customization and tuning options. And last but not least - a unique FCG rewards feature available only in the current release of the game!</p>
+							<p>Immerse the future of the Auto Global Economic system with Formacar!</p>
+						</div>
 					</div>
 					<div class="screen__side">
-						<div class="screen__gallery gallery">
+						<div class="screen__gallery gallery" data-animation="0.9" data-repeat>
 							<div class="gallery__slider swiper">
 								<div class="swiper-wrapper">
 									<div class="gallery__item swiper-slide"
@@ -184,7 +192,7 @@
 				<div class="screen__bottom bottom">
 					<div class="bottom__socials social social_crypto">
 						<span class="social__text">Subscribe to us:</span>
-						<div class="social__links">
+						<div class="social__links" data-animation data-repeat>
 							<a class="social__link social__link_ins" href="./"></a>
 							<a class="social__link social__link_fbk" href="./"></a>
 							<a class="social__link social__link_tgm" href="./"></a>
@@ -196,12 +204,16 @@
 					<a class="bottom__url bottom__url_crypto" href="./">www.formacar.io</a>
 					<div class="bottom__apps bottom__apps_crypto">
 						<a class="bottom__app bottom__app_store" href="./">
-							<span>Download on</span>
-							<span>App Store</span>
+							<div class="bottom__app-inner">
+								<span>Download on</span>
+								<span>App Store</span>
+							</div>
 						</a>
 						<a class="bottom__app bottom__app_play" href="./">
-							<span>Download on</span>
-							<span>Google Play</span>
+							<div class="bottom__app-inner">
+								<span>Download on</span>
+								<span>Google Play</span>
+							</div>
 						</a>
 					</div>
 				</div>
@@ -211,18 +223,20 @@
 			<div class="screen__inner container">
 				<div class="screen__body">
 					<div class="screen__content">
-						<h2 class="screen__title">Formacar<br> design</h2>
-						<p class="screen__text">Formacar Design is a studio dedicated to premium vehicle design and styling.</p>
-						<p class="screen__text">The high standards and the individual approach adopted by Formacar offer a fresh perspective on the mundane and let you discover new aspects of automotive design finesse.</p>
+						<h2 class="screen__title" data-animation="0.9" data-repeat>Formacar<br> design</h2>
+						<div class="screen__text" data-animation="0.9" data-repeat>
+							<p>Formacar Design is a studio dedicated to premium vehicle design and styling.</p>
+							<p>The high standards and the individual approach adopted by Formacar offer a fresh perspective on the mundane and let you discover new aspects of automotive design finesse.</p>
+						</div>
 					</div>
-					<div class="screen__side">
-	
+					<div class="screen__side screen__side_design">
+						<img class="screen__image" src="./images/section-design-img.png" alt="" data-animation="0.9" data-repeat>
 					</div>
 				</div>
 				<div class="screen__bottom bottom">
 					<div class="bottom__socials social social_design">
 						<span class="social__text">Subscribe to us:</span>
-						<div class="social__links">
+						<div class="social__links" data-animation data-repeat>
 							<a class="social__link social__link_ins" href="./"></a>
 						</div>
 					</div>
@@ -234,14 +248,16 @@
 			<div class="screen__inner container">
 				<div class="screen__body">
 					<div class="screen__content">
-						<h2 class="screen__title screen__title_smaller">Become a Partner<br> with Formacar Group!</h2>
-						<p class="screen__text">We're expanding our presence in GCC region and actively seeking partners and like-minded individuals to propel our business forward.</p>
-						<p class="screen__text">If you've dreamt of launching and growing a successful venture in the automotive industry, join our team!</p>
-						<p class="screen__text">Formacar. It changes everything.</p>
-						<a class="screen__button" href="./">Get details</a>
+						<h2 class="screen__title screen__title_smaller" data-animation="0.9" data-repeat>Become a Partner<br> with Formacar Group!</h2>
+						<div class="screen__text" data-animation="0.9" data-repeat>
+							<p>We're expanding our presence in GCC region and actively seeking partners and like-minded individuals to propel our business forward.</p>
+							<p>If you've dreamt of launching and growing a successful venture in the automotive industry, join our team!</p>
+							<p>Formacar. It changes everything.</p>
+						</div>
+						<a class="screen__button" href="./" data-animation data-repeat>Get details</a>
 					</div>
-					<div class="screen__side">
-	
+					<div class="screen__side screen__side_bottom">
+						<img class="screen__image" src="./images/section-bottom-img.png" alt="" data-animation="0.9" data-repeat>
 					</div>
 				</div>
 			</div>

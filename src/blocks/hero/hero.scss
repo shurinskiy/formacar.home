@@ -1,5 +1,9 @@
 .hero {
 	$self: &;
+		
+	@include media('<=xxs') {
+		padding-top: 45px;
+	}
 
 	&__content {
 		display: flex;
@@ -12,6 +16,25 @@
 		display: block;
 		max-width: 410px;
 		margin-bottom: 50px;
+		
+		@include media('<=xxlg') {
+			max-width: 340px;
+		}
+		
+		@include media('<=xxs') {
+			max-width: 240px;
+			margin-bottom: 40px;
+		}
+				
+		&[data-animation] {
+			opacity: 0;
+	
+			&.showed {
+				animation: titleFadeUp 0.7s;
+				animation-fill-mode: forwards;
+				animation-delay: 0s;
+			}
+		}
 	}
 
 	&__text {
@@ -20,6 +43,25 @@
 		font-size: 18px;
 		line-height: 1.4;
 		margin-bottom: 90px;
+		
+		@include media('<=xs') {
+			font-size: 16px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 15px;
+			font-size: 14px;
+		}
+			
+		&[data-animation] {
+			opacity: 0;
+	
+			&.showed {
+				animation: titleFadeUp 0.7s;
+				animation-fill-mode: forwards;
+				animation-delay: 0.2s;
+			}
+		}
 	}
 
 	&__buttons {
@@ -31,6 +73,16 @@
 
 		@include media('<=lg') {
 			max-width: none;
+		}
+			
+		&[data-animation] {
+			opacity: 0;
+	
+			&.showed {
+				animation: titleFadeUp 0.7s;
+				animation-fill-mode: forwards;
+				animation-delay: 0.4s;
+			}
 		}
 	}
 
@@ -94,6 +146,23 @@
 	}
 
 	&__card {
+		&[data-animation] {
+			opacity: 0;
+			
+			&.showed {
+				animation: cardSlideIn 0.7s;
+				animation-fill-mode: forwards;
 
+				@for $i from 1 through 8 {
+					&:nth-child(#{$i}) {
+						animation-delay: #{$i * 0.2}s;
+					}
+				}
+
+				@include media('<=xxs') {
+					animation-delay: 0.2s !important;
+				}
+			}
+		}
 	}
 }

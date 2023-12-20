@@ -11,21 +11,21 @@ import { Mousewheel, EffectFade, Keyboard } from 'swiper/modules';
 
 (() => {
 	let mainSwiper;
-	const wrapper = document.querySelector('.main > .swiper-wrapper');
 	const toggle = scrollClassToggle({ class: 'showed' });
 	const heroButton = document.querySelector('a.hero__button[href="#last"]');
 	const toProjectsButton = document.querySelector('a.hero__down[href="#first"]');
-	const slidesCount = wrapper.querySelectorAll('.main__section').length - 1;
+	const slidesCount = document.querySelectorAll('.main__section').length - 1;
 	const sections = document.querySelectorAll('.main__section');
 	const logos = document.querySelectorAll('.header__logo');
 
-	const clearLogos = (items) => {
-		[...items].forEach(item => item.classList.remove('header__logo_showed'));
+	const clearClasses = (items, cls = 'header__logo_showed') => {
+		if (items)
+			[...items].forEach(item => item.classList.remove(cls));
 	}
 
 	const classesToggle = (sw) => {
 		sw.slides.forEach((slide, index) => {
-			clearLogos(logos);
+			clearClasses(logos);
 			logos[sw.activeIndex - 1]?.classList.add('header__logo_showed');
 
 			slide.querySelectorAll('[data-animation]').forEach((item) => {
@@ -72,7 +72,7 @@ import { Mousewheel, EffectFade, Keyboard } from 'swiper/modules';
 				mainSwiper.destroy(true, true);
 			}
 
-			clearLogos(logos);
+			clearClasses(logos);
 			toggle.init();
 		}
 	});
@@ -82,7 +82,7 @@ import { Mousewheel, EffectFade, Keyboard } from 'swiper/modules';
 		let observer = new IntersectionObserver((entires, observer) => {
 			entires.forEach(({ isIntersecting, target: { index } }) => {
 				if (isIntersecting) {
-					clearLogos(logos);
+					clearClasses(logos);
 					logos[index - 1]?.classList.add('header__logo_showed');
 				}
 			});

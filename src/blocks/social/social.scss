@@ -3,6 +3,10 @@
 	display: flex;
 	align-items: center;
 
+	@include media('<=xxs') {
+		display: block;
+	}
+
 	&_eco {
 		#{$self}__link {
 			&_ins { background-image: url('#{$images-path}icons-sprite.svg#icon-soc-ins-view-cyan'); }
@@ -37,18 +41,39 @@
 	}
 
 	&__text {
-		margin-right: 10px;
+		display: block;
+		margin: 0 20px 0 0;
 		font-family: "OR", sans-serif;
 		text-transform: uppercase;
 		letter-spacing: 0.04em;
 		font-weight: 400;
 		font-size: 18px;
 		color: #fff;
+		
+		@include media('<=xxs') {
+			margin: 0 0 10px 0;
+		}
 	}
 
 	&__links {
 		display: flex;
 		align-items: center;
+		gap: 20px;
+
+		&[data-animation] #{$self}__link {
+			opacity: 0;
+		}
+
+		&[data-animation].showed #{$self}__link {
+			animation: titleFadeUp 0.3s;
+			animation-fill-mode: forwards;
+
+			@for $i from 1 through 8 {
+				&:nth-child(#{$i}) {
+					animation-delay: #{$i * 0.1}s;
+				}
+			}
+		}
 	}
 
 	&__link {
@@ -59,7 +84,6 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: contain;
-		margin: 0 10px;
 		transition: filter 0.3s;
 		filter: saturate(0) brightness(2);
 		
