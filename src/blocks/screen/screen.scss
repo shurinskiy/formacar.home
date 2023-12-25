@@ -43,12 +43,6 @@
 				padding-bottom: 0px;
 			}		
 		}
-
-		#{$self}__side {
-			@include media('<=lg') {
-				background-color: rgba(255, 255, 255, 0.3);
-			}		
-		}
 	}
 	
 	&__inner {
