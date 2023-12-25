@@ -144,12 +144,11 @@
 		}
 		
 		&_bottom {
-			@include outline();
 			justify-content: flex-end;
 			align-self: stretch;
 		
 			@include media('<=lg') {
-				margin-bottom: 0px;
+				margin: 0;
 			}
 
 			#{$self}__image {
@@ -164,6 +163,7 @@
 				}
 		
 				@include media('<=lg') {
+					bottom: 0;
 					height: auto;
 					width: 670px;
 					margin: 0 auto;
