@@ -1,0 +1,104 @@
+.modal {
+	$self: &;
+	box-sizing: border-box;
+	display: none;
+	position: fixed;
+	z-index: 9999;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	height: calc(var(--vh, 1vh) * 100);
+	background-color: rgba(0, 0, 0, 0.8);
+	backdrop-filter: blur(5px);
+	padding: 30px;
+	overflow-y: auto;
+	@keyframes slideInDown {
+		from { opacity: 0; transform: translateY(-2000px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+	@keyframes show_fade { from { opacity: 0; } to { opacity: 1; }}
+	
+	@include media('<=xxs') {
+		padding: 15px;
+	}
+
+	&[style*="display: block"] {
+		display: flex !important;
+	}
+
+	&_self {
+
+	}
+
+	&_feedback {
+		#{$self}__body {
+			padding: 100px;
+			background-color: #151515;
+			max-width: 560px;
+			
+			@include media('<=xs') {
+				padding: 68px 60px;
+			}
+			
+			@include media('<=xxs') {
+				padding: 68px 30px;
+			}
+		}
+		
+		#{$self}__close {
+			transition: transform 0.3s, filter 0.3s, opacity 0.3s;
+			opacity: 0.5;
+			
+			&:hover {
+				transform: scale(1.25);
+				opacity: 1;
+			}
+		}
+	}
+	
+	&__hidden {
+		display: none;
+	}
+
+	&__body {
+		animation: slideInDown 0.7s ease both;
+		box-sizing: border-box;
+		position: relative;
+		background-color: #e2e2e2;
+		border-radius: 5px;
+		margin: auto;
+		padding: 40px;
+		width: 100%;
+		max-width: 1000px;
+		box-shadow: 0px 1px 10px 4px rgba(0, 0, 0, 0.07);
+		
+		@include media('<=xxs') {
+			padding: 20px;
+		}
+	}
+	
+	&__content {
+		min-height: 200px;
+		
+		@include media('<=xxs') {
+			min-height: 140px;
+		}
+
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+
+	&__close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+		z-index: 2;
+		background: url('#{$images-path}icons-sprite.svg#icon-close-view-white') center / 16px 16px no-repeat transparent;
+	}
+}

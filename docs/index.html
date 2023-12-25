@@ -254,7 +254,7 @@
 							<p>If you've dreamt of launching and growing a successful venture in the automotive industry, join our team!</p>
 							<p>Formacar. It changes everything.</p>
 						</div>
-						<a class="screen__button" href="./" data-animation data-repeat>Get details</a>
+						<a class="screen__button button" href="./" data-modal="#feedback" data-animation data-repeat>Get details</a>
 					</div>
 					<div class="screen__side screen__side_bottom">
 						<img class="screen__image" src="./images/section-bottom-img.png" alt="" data-animation="0.9" data-repeat>
@@ -264,6 +264,27 @@
 		</section>
 	</div>
 </main> 
+
+<div class="modal__hidden">
+	<div id="feedback">
+		<form class="form">
+			<div class="form__body">
+				<label class="form__field form__field_error"><input type="text" placeholder="Name" autocomplete="off"></label>
+				<select class="form__field form__field_select form__field_error">
+					<option value="">Purpose of Inquiry</option>
+					<option value="Business/Partnership">Business/Partnership</option>
+					<option value="Investments">Investments</option>
+				</select>
+				<label class="form__field"><input name="phone" type="text" placeholder="Phone" autocomplete="off"></label>
+				<label class="form__field"><input name="email" type="text" placeholder="E-mail" autocomplete="off"></label>
+				<label class="form__field"><textarea name="msg" placeholder="Message" rows="1"></textarea></label>
+			</div>
+			<div class="form__buttons">
+				<button class="form__button button button_fade" type="submit">Send</button>
+			</div>
+		</form>
+	</div>
+</div> 
 
 <script src="common.js"></script> 
 </body> 

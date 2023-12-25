@@ -313,21 +313,7 @@
 	}
 
 	&__button {
-		display: block;
-		box-sizing: border-box;
-		font-family: "MR", sans-serif;
-		text-transform: uppercase;
-		text-decoration: none;
-		font-weight: 700;
-		font-size: 16px;
-		padding: 13px;
-		color: #12141A;
-		background-color: #fff;
-		border-radius: 8px;
-		text-align: center;
-		max-width: 240px;
 		margin-top: 40px;
-		width: 100%;
 
 		@include media('<=xxs') {
 			margin: 10px 0;
