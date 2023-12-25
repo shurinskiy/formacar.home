@@ -3,6 +3,7 @@
 	box-sizing: border-box;
 	max-width: 100%;
 	margin: 0;
+	@include outline();
 	
 	&.swiper {
 		height: 100vh;
