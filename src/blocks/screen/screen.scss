@@ -3,7 +3,6 @@
 	box-sizing: border-box;
 	border-left: 5px solid #fff;
 	overflow-x: hidden;
-	@include outline();
 
 	@include media('<=xxs') {
 		border-width: 3px;
@@ -41,7 +40,8 @@
 
 		#{$self}__inner {
 			@include media('<=lg') {
-				padding-bottom: 0;
+				// padding-bottom: 0px !important;
+				padding: 0;
 			}		
 		}
 	}
