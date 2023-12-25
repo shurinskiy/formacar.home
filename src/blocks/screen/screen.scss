@@ -37,7 +37,12 @@
 	}
 	
 	&_bottom {
-		
+
+		#{$self}__inner {
+			@include media('<=lg') {
+				padding-bottom: 0;
+			}		
+		}
 	}
 	
 	&__inner {
@@ -143,7 +148,7 @@
 			align-self: stretch;
 		
 			@include media('<=lg') {
-				margin-bottom: -50px;
+				margin-bottom: 0px;
 			}
 
 			#{$self}__image {
