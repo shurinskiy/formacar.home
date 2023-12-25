@@ -40,8 +40,7 @@
 
 		#{$self}__inner {
 			@include media('<=lg') {
-				// padding-bottom: 0px !important;
-				padding: 0;
+				padding-bottom: 0px !important;
 			}		
 		}
 	}
@@ -50,8 +49,8 @@
 		box-sizing: border-box;
 		display: flex;
 		flex-flow: column nowrap;
-		padding-top: 50px;
-		padding-bottom: 50px;
+		// padding-top: 50px;
+		// padding-bottom: 50px;
 		height: 100%;
 	}
 	
