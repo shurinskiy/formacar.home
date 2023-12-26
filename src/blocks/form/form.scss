@@ -6,6 +6,34 @@
 
 	}
 
+	&__message {
+		color: #fff;
+		float: left;
+		font-size: 16px;
+		text-align: center;
+		width: 100%;
+
+		&_error {
+			color: #eb5757;
+		}
+
+		&_success {
+			color: #34eb6e;
+		}
+	}
+
+	&__captcha_policy {
+		color: #888;
+		float: left;
+		font-size: 12px;
+		margin: 70px 0 0 0;
+		width: 100%;
+
+		a {
+			color: #888;
+		}
+	}
+
 	&__body {
 		margin-bottom: 48px;
 	}
@@ -141,4 +169,8 @@
 	&__button {
 		width: 100%;
 	}
+}
+
+.grecaptcha-badge {
+	visibility: hidden !important;
 }
