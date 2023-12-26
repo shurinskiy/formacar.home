@@ -13,8 +13,9 @@ import { Mousewheel, EffectFade, Keyboard } from 'swiper/modules';
 	let mainSwiper;
 	const toggle = scrollClassToggle({ class: 'showed' });
 	const heroButton = document.querySelector('a.hero__button[href="#last"]');
-	const toProjectsButton = document.querySelector('a.hero__down[href="#first"]');
+	const toProjectsButton = document.querySelector('a.hero__down[href="#eco"]');
 	const slidesCount = document.querySelectorAll('.main__section').length - 1;
+	const cardButtons = document.querySelectorAll('.card__top a.card__link');
 	const sections = document.querySelectorAll('.main__section');
 	const logos = document.querySelectorAll('.header__logo');
 
@@ -66,6 +67,9 @@ import { Mousewheel, EffectFade, Keyboard } from 'swiper/modules';
 			mainSwiper = enableMainSwiper();
 			heroButton?.addEventListener('click', () => mainSwiper.slideTo(slidesCount, 800));
 			toProjectsButton?.addEventListener('click', () => mainSwiper.slideNext());
+			[...cardButtons]?.forEach((button, i) => {
+				button.addEventListener('click', () => mainSwiper.slideTo(++i, 800));
+			});
 		},
 		unmatch: function() {
 			if (mainSwiper !== undefined ) {
